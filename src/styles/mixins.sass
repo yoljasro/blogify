@@ -7,3 +7,39 @@
     @media (max-width:998px)
         padding: 30px 13px
         width: 95%
+
+@mixin font($size, $color, $weight)
+    font-size: $size
+    color: $color
+
+    @if $weight == black
+        font-weight: 400 !important
+        font-family: Tomorrow-Black !important
+    @else if $weight == medium
+        font-weight: 500 !important
+        line-height: 16px !important
+        font-family: Tomorrow-Medium !important
+    @else if $weight == bold
+        font-weight: 600 !important
+        font-family: Tomorrow-Bold !important
+    @else if $weight == regular
+        font-weight: 500 !important
+        font-family: Tomorrow-Regular !important
+    @else if $weight == extra-bold
+        font-weight: 700 !important
+        font-family: Tomorrow-ExtraBold !important
+    @else if $weight == thin
+        font-weight: 500 !important
+        font-family: Tomorrow-Thin !important
+    @else if $weight == open-bold
+        font-weight: 500 !important
+        font-family: OpenSans_Condensed-Bold !important
+    @else if $weight == open-medium
+        font-weight: 500 !important
+        font-family: OpenSans_Condensed-Medium !important
+    @else if $weight == opensans-medium
+        font-weight: 700 !important
+        font-family: OpenSans-Medium !important
+    @else if $weight == open-regular
+        font-weight: 500 !important
+        font-family: OpenSans-Regular !important

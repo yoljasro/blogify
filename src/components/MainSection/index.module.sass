@@ -1,0 +1,42 @@
+@import "../../styles/mixins"
+
+.main
+    @include container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    gap: 30px
+    margin-top: 70px
+    margin-bottom: -105px
+
+    &__section
+        display: flex
+        flex-direction: column
+        gap: 60px
+        width: 50%
+
+    &__title
+        @include font(48px , #FFFFFF , opensans-medium)
+        letter-spacing: 0.30px
+        width: 100%
+        width: 615px
+
+    &__desc
+        width: 100%
+        width: 588px
+        @include font(20px , #FFFFFF , open-regular)
+
+    &__btn
+        padding: 22px , 37px
+        height: 64px
+        border-radius: 24px
+        border: none
+        @include font(16px ,#FFFFFF ,  opensans-medium)
+        width: 100%
+        max-width: 336px
+        cursor: pointer
+        background: #453564
+        margin-top: 10px
+
+    &__imageSection
+        width: 50%

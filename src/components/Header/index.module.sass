@@ -2,3 +2,75 @@
 
 .header
     @include container
+    width: 100%
+    display: flex
+    justify-content: space-between
+    gap: 160px
+
+    &__logo
+        margin-top: -10px !important
+
+    &__mode
+        display: flex
+        gap: 10px
+        @include font(18px , #FFF , medium)
+
+    &__select
+        width: 100%
+        max-width: 60px
+        height: 29px
+        flex-shrink: 0
+        background: #FFF
+        border: none
+        border-radius: 50px
+        cursor: pointer
+        margin-top: -6px
+        padding: 4px
+
+    &__circle
+        width: 20px
+        height: 20px
+        border-radius: 100%
+        background-color: #3FBCD7
+
+    &__menu
+        display: flex
+        gap: 44px
+        margin-left: 60px
+        list-style: none
+
+    &__services
+        display: flex
+        gap: 6px
+        cursor: pointer
+
+    &__drop
+        margin-top: 6px
+
+    &__btns
+        display: flex
+        gap: 20px
+
+    &__start
+        width: 100%
+        max-width: 118px
+        border-radius: 4px
+        border: 2px
+        background: transparent
+        padding: 18px 14px
+        border: 2px solid #FFFFFF
+        @include font(16px , #FFF ,  open-regular)
+        margin-top: -15px
+        cursor: pointer
+
+    &__login
+        display: flex
+        gap: 11px
+        margin-top: 5px
+        cursor: pointer
+
+    &__text
+        @include font(16px , #FFF , open-regular)
+
+    &__icon
+        margin-top: -5px
