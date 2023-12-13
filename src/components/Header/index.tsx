@@ -8,24 +8,15 @@ import Image from "next/image";
 import Link from "next/link";
 
 export const Header: FC<any> = () => {
-  const [nightMode, setNightMode] = useState(false);
-  const [selectedMode, setSelectedMode] = useState<"MIJOZ" | "Blogger">(
-    "MIJOZ"
-  );
+  const [isBloggerMode, setIsBloggerMode] = useState(true);
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
 
-  const handleCheckboxChange = (mode: "MIJOZ" | "Blogger") => {
-    setSelectedMode(mode);
+  const handleSelectClick = () => {
+    setIsBloggerMode(!isBloggerMode);
   };
 
-  const handleThemeChange = () => {
-    const newTheme = theme === 'light' ? 'dark' : 'light';
-    setTheme(newTheme);
-  };
 
-  const toggleNightMode = () => {
-    setNightMode((prevNightMode) => !prevNightMode);
-  };
+
 
   return (
     <div className={styles.header}>
@@ -40,8 +31,8 @@ export const Header: FC<any> = () => {
       <div>
         <div className={styles.header__mode}>
           <p>MIJOZ</p>
-          <div className={styles.header__select}>
-            <div className={styles.header__circle}></div>
+          <div className={`${styles.header__select} ${isBloggerMode ? '' : styles.active}`} onClick={handleSelectClick}>
+            <div className={`${styles.header__circle} ${isBloggerMode ? '' : styles.shiftRight}`}></div>
           </div>
           <p>BLOGGER</p>
           <ul className={styles.header__menu}>

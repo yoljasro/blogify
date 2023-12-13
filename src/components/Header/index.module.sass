@@ -27,11 +27,24 @@
         margin-top: -6px
         padding: 4px
 
+    &__select.active
+        background: green
+        transition: transform 0.3s ease-in-out
+
     &__circle
         width: 20px
         height: 20px
         border-radius: 100%
         background-color: #3FBCD7
+        top: 50%
+        transition: transform 0.3s ease-in-out
+
+    &__circle.shiftRight
+        position: relative
+        left: 30px
+        top: 0px
+        background: #FFF
+        transition: transform 0.3s ease-in-out
 
     &__menu
         display: flex
