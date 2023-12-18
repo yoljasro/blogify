@@ -31,6 +31,7 @@ export const Posts: FC<any> = () => {
                 <Image className={styles.posts__image} src={'/assets/images/storytwo.png'} alt="storyimage" width={179} height={317} />
                 <Image className={styles.posts__image} src={'/assets/images/storythree.png'} alt="storyimage" width={179} height={317} />
                 <Image className={styles.posts__image} src={'/assets/images/storyfour.png'} alt="storyimage" width={179} height={317} />
+                <Image className={styles.posts__image} src={'/assets/images/storyfive.png'} alt="storyimage" width={179} height={317} />
             </div>
             <button className={styles.posts__btn}>BOSHLASH</button>
         </div>
